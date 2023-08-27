@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.opciones = new System.Windows.Forms.MenuStrip();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuinteressimple = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuinterescompuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.interesTotalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeInteresesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capitalInicialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capitalFinalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuinterescompuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.panel = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opciones.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -46,7 +46,7 @@
             // 
             // opciones
             // 
-            this.opciones.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.opciones.BackColor = System.Drawing.SystemColors.MenuBar;
             this.opciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem,
             this.menuinteressimple,
@@ -56,6 +56,13 @@
             this.opciones.Size = new System.Drawing.Size(734, 24);
             this.opciones.TabIndex = 0;
             this.opciones.Text = "menu";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // menuinteressimple
             // 
@@ -69,6 +76,34 @@
             this.menuinteressimple.Text = "Interés Simple";
             this.menuinteressimple.Click += new System.EventHandler(this.menuinteressimple_Click);
             // 
+            // interesTotalesToolStripMenuItem
+            // 
+            this.interesTotalesToolStripMenuItem.Name = "interesTotalesToolStripMenuItem";
+            this.interesTotalesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.interesTotalesToolStripMenuItem.Text = "Intereses totales";
+            this.interesTotalesToolStripMenuItem.Click += new System.EventHandler(this.interesTotalesToolStripMenuItem_Click);
+            // 
+            // tipoDeInteresesToolStripMenuItem
+            // 
+            this.tipoDeInteresesToolStripMenuItem.Name = "tipoDeInteresesToolStripMenuItem";
+            this.tipoDeInteresesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.tipoDeInteresesToolStripMenuItem.Text = "Tasa de interés";
+            this.tipoDeInteresesToolStripMenuItem.Click += new System.EventHandler(this.tipoDeInteresesToolStripMenuItem_Click);
+            // 
+            // capitalInicialToolStripMenuItem
+            // 
+            this.capitalInicialToolStripMenuItem.Name = "capitalInicialToolStripMenuItem";
+            this.capitalInicialToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.capitalInicialToolStripMenuItem.Text = "Capital inicial";
+            this.capitalInicialToolStripMenuItem.Click += new System.EventHandler(this.capitalInicialToolStripMenuItem_Click);
+            // 
+            // capitalFinalToolStripMenuItem
+            // 
+            this.capitalFinalToolStripMenuItem.Name = "capitalFinalToolStripMenuItem";
+            this.capitalFinalToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.capitalFinalToolStripMenuItem.Text = "Capital final";
+            this.capitalFinalToolStripMenuItem.Click += new System.EventHandler(this.capitalFinalToolStripMenuItem_Click);
+            // 
             // menuinterescompuesto
             // 
             this.menuinterescompuesto.Name = "menuinterescompuesto";
@@ -76,39 +111,12 @@
             this.menuinterescompuesto.Text = "Interés Compuesto";
             this.menuinterescompuesto.Click += new System.EventHandler(this.menuinterescompuesto_Click);
             // 
-            // interesTotalesToolStripMenuItem
-            // 
-            this.interesTotalesToolStripMenuItem.Name = "interesTotalesToolStripMenuItem";
-            this.interesTotalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.interesTotalesToolStripMenuItem.Text = "Intereses totales";
-            this.interesTotalesToolStripMenuItem.Click += new System.EventHandler(this.interesTotalesToolStripMenuItem_Click);
-            // 
-            // tipoDeInteresesToolStripMenuItem
-            // 
-            this.tipoDeInteresesToolStripMenuItem.Name = "tipoDeInteresesToolStripMenuItem";
-            this.tipoDeInteresesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tipoDeInteresesToolStripMenuItem.Text = "Tasa de interés";
-            this.tipoDeInteresesToolStripMenuItem.Click += new System.EventHandler(this.tipoDeInteresesToolStripMenuItem_Click);
-            // 
-            // capitalInicialToolStripMenuItem
-            // 
-            this.capitalInicialToolStripMenuItem.Name = "capitalInicialToolStripMenuItem";
-            this.capitalInicialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.capitalInicialToolStripMenuItem.Text = "Capital inicial";
-            this.capitalInicialToolStripMenuItem.Click += new System.EventHandler(this.capitalInicialToolStripMenuItem_Click);
-            // 
-            // capitalFinalToolStripMenuItem
-            // 
-            this.capitalFinalToolStripMenuItem.Name = "capitalFinalToolStripMenuItem";
-            this.capitalFinalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.capitalFinalToolStripMenuItem.Text = "Capital final";
-            this.capitalFinalToolStripMenuItem.Click += new System.EventHandler(this.capitalFinalToolStripMenuItem_Click);
-            // 
             // panel
             // 
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel.Controls.Add(this.logo);
             this.panel.Location = new System.Drawing.Point(0, 27);
             this.panel.Name = "panel";
@@ -118,22 +126,15 @@
             // 
             // logo
             // 
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.Image = global::CALCULADORA_HEDAMIS.Properties.Resources.logo;
             this.logo.InitialImage = null;
-            this.logo.Location = new System.Drawing.Point(114, 0);
+            this.logo.Location = new System.Drawing.Point(374, 80);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(506, 426);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.logo.Size = new System.Drawing.Size(264, 280);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.logo_Click);
-            // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -151,7 +152,6 @@
             this.opciones.ResumeLayout(false);
             this.opciones.PerformLayout();
             this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
